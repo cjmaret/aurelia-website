@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy | Aurelia Labs</title>
+  <title>Privacy Policy | Aurelia Digital</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -31,10 +31,10 @@
 </head>
 <body>
   <h1>Privacy Policy</h1>
-  <p><strong>Effective Date:</strong> May 27, 2025</p>
+  <p><strong>Effective Date:</strong> April 22, 2026</p>
 
   <p>
-    Aurelia Labs (“we”, “our”, or “us”) provides a live speech and grammar
+    Aurelia Digital LLC (“we”, “our”, or “us”) provides a live speech and grammar
     correction app that allows users to speak in their target language and
     receive AI-assisted corrections. We are committed to protecting your
     privacy and being transparent about how your data is used.
@@ -42,12 +42,15 @@
 
 <h2>1. Information We Collect</h2>
 <ul>
-  <li>Email, username, and password (securely stored)</li>
+  <li>Email and username (securely stored)</li>
+  <li>Password, if you register with email/password (stored as a secure hash)</li>
+  <li>If you sign in with Google or Apple: your name and email address as provided by those services</li>
   <li>Speech transcriptions and AI-generated grammar corrections</li>
-  <li>Correction history</li>
+  <li>Correction history, including pronunciation scores</li>
+  <li>Language preferences (app language, target language, proficiency level)</li>
   <li><strong>Audio recordings (temporarily processed, then deleted)</strong></li>
 </ul>
-<p>We do not collect analytics or location data.</p>
+<p>We do not collect analytics, advertising identifiers, or location data.</p>
 
 <h2>2. How We Use Your Information</h2>
 <p>We use your data to:</p>
@@ -57,6 +60,7 @@
   <li>Allow access to your correction history</li>
   <li>Authenticate your account</li>
   <li><strong>Process speech-to-text transcription via third-party AI services</strong></li>
+  <li><strong>Screen submitted content for policy violations using automated moderation</strong></li>
 </ul>
 <p>We do not use your data for advertising.</p>
 
@@ -67,12 +71,46 @@
 <ol>
   <li><strong>Transmitted securely</strong> (encrypted) to our backend servers</li>
   <li><strong>Sent to third-party AI services</strong> for processing (see below)</li>
-  <li><strong>Processed by AI</strong> on our servers for grammar analysis and corrections</li>
+  <li><strong>Analyzed by a third-party AI service</strong> (Together AI) for grammar correction</li>
   <li><strong>Deleted after processing</strong> - audio files are not permanently stored</li>
 </ol>
 
 <h3>Third-Party AI Services</h3>
 <p>We use the following AI services to process your recordings:</p>
+
+<h4>Together AI (DeepSeek)</h4>
+<p><strong>Purpose:</strong> Grammar correction and phonetic respelling</p>
+<ul>
+  <li>Your transcribed speech is sent to Together AI to identify grammar errors and generate corrections</li>
+  <li>Together AI runs DeepSeek models on their infrastructure</li>
+  <li>Text is processed and returned; Together AI does not permanently store your inputs per their API terms</li>
+</ul>
+<p>
+  Learn more: <a href="https://www.together.ai/privacy" target="_blank">Together AI Privacy Policy</a>
+</p>
+
+<h4>ElevenLabs</h4>
+<p><strong>Purpose:</strong> Text-to-speech audio for word and sentence pronunciation</p>
+<ul>
+  <li>When you request to hear the pronunciation of a word or sentence, that text is sent to ElevenLabs to generate audio</li>
+  <li>ElevenLabs does not receive any of your personal account information or audio recordings</li>
+  <li>ElevenLabs does not use API-submitted text to train their models per their API terms</li>
+</ul>
+<p>
+  Learn more: <a href="https://elevenlabs.io/privacy" target="_blank">ElevenLabs Privacy Policy</a>
+</p>
+
+<h4>OpenAI Moderation API</h4>
+<p><strong>Purpose:</strong> Automated content moderation</p>
+<ul>
+  <li>After your speech is transcribed, the text is sent to OpenAI's Moderation API to screen for prohibited content</li>
+  <li>If a violation is detected, the recording is rejected and not saved</li>
+  <li>Moderation results are not stored; text is processed in real time and discarded</li>
+  <li>OpenAI <strong>does not use this data to train their AI models</strong> (per their API terms)</li>
+</ul>
+<p>
+  Learn more: <a href="https://platform.openai.com/docs/guides/moderation" target="_blank">OpenAI Moderation</a>
+</p>
 
 <h4>OpenAI Whisper API</h4>
 <p><strong>Purpose:</strong> Speech-to-text transcription</p>
@@ -110,10 +148,11 @@
   We share limited data with the following third parties:
 </p>
 <ul>
-  <li><strong>OpenAI:</strong> Voice recordings are sent to OpenAI's Whisper API for speech-to-text transcription. 
-      Recordings are processed securely and are not used to train AI models.</li>
-  <li><strong>Microsoft Azure Speech Services:</strong> Voice recordings are sent to Azure for pronunciation assessment. 
-      Recordings are processed securely and are not used to train AI models.</li>
+  <li><strong>Together AI (DeepSeek):</strong> Transcribed text is sent to Together AI for grammar correction and phonetic respelling. Text is not used to train models per their API terms.</li>
+  <li><strong>OpenAI (Whisper API):</strong> Voice recordings are sent to OpenAI for speech-to-text transcription. Recordings are not used to train AI models.</li>
+  <li><strong>OpenAI (Moderation API):</strong> Transcribed text is sent to OpenAI for automated content moderation. Text is processed in real time and not retained.</li>
+  <li><strong>Microsoft Azure Speech Services:</strong> Voice recordings are sent to Azure for pronunciation assessment. Recordings are not used to train AI models.</li>
+  <li><strong>ElevenLabs:</strong> Text is sent to ElevenLabs to generate pronunciation audio when you request it. No personal account data or audio recordings are shared.</li>
 </ul>
 <p>
   We do not share your email, username, password, or correction history with third parties. 
@@ -148,7 +187,32 @@
     as described here.
   </p>
 
-  <h2>9. Contact Us</h2>
+  <h2>9. Prohibited Uses and Content Moderation</h2>
+  <p>
+    Aurelia is a language learning tool. You agree not to use the app to submit content that:
+  </p>
+  <ul>
+    <li>Promotes hatred, discrimination, or violence against any person or group</li>
+    <li>Contains sexually explicit or graphic material</li>
+    <li>Depicts or encourages self-harm or suicide</li>
+    <li>Harasses, threatens, or exploits any individual</li>
+    <li>Violates any applicable law or regulation</li>
+  </ul>
+  <p>
+    All speech submissions are automatically screened by OpenAI's Moderation API before being processed.
+    Content that violates these guidelines is rejected and not saved. Repeated or serious violations may result in account suspension.
+  </p>
+  <p>
+    We reserve the right to suspend or terminate accounts that misuse the service.
+  </p>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>
+    We may update this policy from time to time. If we make material changes, we will update the effective date at the top of this page.
+    Continued use of the app after changes are posted constitutes acceptance of the updated policy.
+  </p>
+
+  <h2>11. Contact Us</h2>
   <p>
     If you have questions about this policy, contact us at:
     <br />
